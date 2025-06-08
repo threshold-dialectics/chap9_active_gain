@@ -1,0 +1,62 @@
+# Global simulation parameters
+{
+  "duration": 500,
+  "baseline_strain": 2.4,
+  "shock_factor": 3.2,
+  "shock_duration": 20,
+  "shock_interval_mu": 150,
+  "shock_interval_sd": 25,
+  "strain_avg_tau": 15,
+  "baseline_cost_F_crit": 0.01,
+  "k_beta": 0.001,
+  "phi_beta": 1.0,
+  "g_setpoints": {
+    "baseline": 1.0,
+    "pulse": 3.0,
+    "conservative": 0.3
+  },
+  "g_pulse_duration_min": 5,
+  "g_pulse_duration_max": 15,
+  "beta_setpoints": {
+    "baseline": 1.0,
+    "conservative": 0.5
+  },
+  "F_crit_thresholds": {
+    "pulse_min": 20.0,
+    "conservative": 12.0,
+    "proactive_abs": 25.0
+  },
+  "safety_margin_rapid_decrease_threshold": 0.24,
+  "w": [
+    0.3,
+    0.3,
+    0.4
+  ]
+}
+
+Scenario                                   n  surv%  phi1  k_g  heuristic smct normG  pulses±SD  t_surv±SD  totPulse±SD  indivDur±SD  Fsurv±SD  Fbreach±SD  initF±SD
+SMCTSweep_Baseline_HeurOFF                 50  94.00 0.30 0.020 OFF        nan   0.1 22.20±1.65 498.3±6.9  327.8±24.1 14.76±1.46 163.0±0.2  163.9±0.1  181.0±0.0 
+SMCTSweep_x0.05_AbsGainHeurON              50  94.00 0.30 0.020 AbsGain    0.4   0.1 22.20±1.65 498.3±6.9  327.8±24.1 14.76±1.46 163.0±0.2  163.9±0.1  181.0±0.0 
+SMCTSweep_x0.15_AbsGainHeurON              50  94.00 0.30 0.020 AbsGain    1.2   0.1 22.20±1.65 498.3±6.9  327.8±24.1 14.76±1.46 163.0±0.2  163.9±0.1  181.0±0.0 
+SMCTSweep_x0.25_AbsGainHeurON              50  94.00 0.30 0.020 AbsGain    2.0   0.1 22.20±1.65 498.3±6.9  327.8±24.1 14.76±1.46 163.0±0.2  163.9±0.1  181.0±0.0 
+SMCTSweep_x0.35_AbsGainHeurON              50  94.00 0.30 0.020 AbsGain    2.8   0.1 22.20±1.65 498.3±6.9  327.8±24.1 14.76±1.46 163.0±0.2  163.9±0.1  181.0±0.0 
+SMCTSweep_x0.45_AbsGainHeurON              50  92.00 0.30 0.020 AbsGain    3.6   0.1 22.20±1.65 498.0±7.0  327.5±23.8 14.75±1.51 163.0±0.2  163.7±0.3  181.0±0.0 
+SMCTSweep_x0.50_AbsGainHeurON              50  34.00 0.30 0.020 AbsGain    4.0   0.1 16.60±4.87 402.3±86.0 238.0±76.2 14.34±2.87 163.0±0.2  168.6±2.3  181.0±0.0 
+SMCTSweep_x0.55_AbsGainHeurON              50   0.00 0.30 0.020 AbsGain    4.4   0.1 2.00±0.00 165.3±25.8 16.0±0.0  8.00±7.00 nan±nan  175.7±0.8  181.0±0.0 
+SMCTSweep_x0.60_AbsGainHeurON              50   0.00 0.30 0.020 AbsGain    4.8   0.1 2.00±0.00 165.3±25.8 16.0±0.0  8.00±7.00 nan±nan  175.7±0.8  181.0±0.0 
+SMCTSweep_x0.65_AbsGainHeurON              50   0.00 0.30 0.020 AbsGain    5.2   0.1 1.00±0.00 164.3±25.8 15.0±0.0  15.00±0.00 nan±nan  175.8±0.8  181.0±0.0 
+SMCTSweep_x0.70_AbsGainHeurON              50   0.00 0.30 0.020 AbsGain    5.6   0.1 9.86±1.66 214.4±79.9 155.1±25.9 15.00±0.00 nan±nan  173.2±2.5  181.0±0.0 
+SMCTSweep_x0.75_AbsGainHeurON              50   0.00 0.30 0.020 AbsGain    6.0   0.1 9.44±1.64 206.8±76.4 156.6±24.6 15.00±0.00 nan±nan  173.4±2.4  181.0±0.0 
+SMCTSweep_x0.80_AbsGainHeurON              50   0.00 0.30 0.020 AbsGain    6.4   0.1 0.00±0.00 159.3±25.8 0.0±0.0  nan±nan  nan±nan  176.1±0.8  181.0±0.0 
+PDMStrong_phi1_0.75_kg_0.05_HeurOFF        50  30.00 0.75 0.050 OFF        nan   0.1 16.70±5.55 403.3±83.7 239.0±86.0 14.31±2.93 129.4±1.4  146.1±8.5  181.0±0.0 
+PDMStrong_phi1_0.75_kg_0.05_SMCTx0.25_Heur 50  30.00 0.75 0.050 AbsGain    2.0   0.1 16.70±5.55 403.3±83.7 239.0±86.0 14.31±2.93 129.4±1.4  146.1±8.5  181.0±0.0 
+NormGain_Baseline_HeurOFF_phi1_0.30_kg_0.0 50  94.00 0.30 0.020 OFF        nan   0.1 22.20±1.65 498.3±6.9  327.8±24.1 14.76±1.46 163.0±0.2  163.9±0.1  181.0±0.0 
+NormGain_Threshx0.05_HeurON                50  94.00 0.30 0.020 NormGain   nan  0.05 22.20±1.65 498.3±6.9  327.8±24.1 14.76±1.46 163.0±0.2  163.9±0.1  181.0±0.0 
+NormGain_Threshx0.10_HeurON                50  94.00 0.30 0.020 NormGain   nan   0.1 22.20±1.65 498.3±6.9  327.8±24.1 14.76±1.46 163.0±0.2  163.9±0.1  181.0±0.0 
+NormGain_Threshx0.15_HeurON                50  94.00 0.30 0.020 NormGain   nan  0.15 22.20±1.65 498.3±6.9  327.8±24.1 14.76±1.46 163.0±0.2  163.9±0.1  181.0±0.0 
+NormGain_Threshx0.20_HeurON                50  94.00 0.30 0.020 NormGain   nan   0.2 22.20±1.65 498.3±6.9  327.8±24.1 14.76±1.46 163.0±0.2  163.9±0.1  181.0±0.0 
+NormGain_Threshx0.25_HeurON                50  94.00 0.30 0.020 NormGain   nan  0.25 22.20±1.65 498.3±6.9  327.8±24.1 14.76±1.46 163.0±0.2  163.9±0.1  181.0±0.0 
+NormGain_Threshx0.30_HeurON                50  94.00 0.30 0.020 NormGain   nan   0.3 22.20±1.65 498.3±6.9  327.8±24.1 14.76±1.46 163.0±0.2  163.9±0.1  181.0±0.0 
+NormGain_Threshx0.35_HeurON                50  94.00 0.30 0.020 NormGain   nan  0.35 22.20±1.65 498.3±6.9  327.8±24.1 14.76±1.46 163.0±0.2  163.9±0.1  181.0±0.0 
+NormGain_Threshx0.40_HeurON                50   0.00 0.30 0.020 NormGain   nan   0.4 0.00±0.00 163.3±25.8 0.0±0.0  nan±nan  nan±nan  175.9±0.8  181.0±0.0 
+AnomalyInvestigate_SMCTx0.70_AbsGainHeurON  1   0.00 0.30 0.020 AbsGain    5.6   0.1 10.00±0.00 176.0±0.0  165.0±0.0  15.00±0.00 nan±nan  174.2±0.0  181.0±0.0 

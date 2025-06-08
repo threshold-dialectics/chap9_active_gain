@@ -1,0 +1,15 @@
+Scenario                                SMCT   n  SurvRate  Pulse±SD  Fsurv±SD
+SMCTSweep_x0.05_AbsGainHeurON            0.40  50   94.00% 22.20±1.65 163.0±0.2 
+SMCTSweep_x0.15_AbsGainHeurON            1.20  50   94.00% 22.20±1.65 163.0±0.2 
+SMCTSweep_x0.25_AbsGainHeurON            2.00  50   94.00% 22.20±1.65 163.0±0.2 
+PDMStrong_phi1_0.75_kg_0.05_SMCTx0.25_He 2.00  50   30.00% 16.70±5.55 129.4±1.4 
+SMCTSweep_x0.35_AbsGainHeurON            2.80  50   94.00% 22.20±1.65 163.0±0.2 
+SMCTSweep_x0.45_AbsGainHeurON            3.60  50   92.00% 22.20±1.65 163.0±0.2 
+SMCTSweep_x0.50_AbsGainHeurON            4.00  50   34.00% 16.60±4.87 163.0±0.2 
+SMCTSweep_x0.55_AbsGainHeurON            4.40  50    0.00%  2.00±0.00 nan±nan 
+SMCTSweep_x0.60_AbsGainHeurON            4.80  50    0.00%  2.00±0.00 nan±nan 
+SMCTSweep_x0.65_AbsGainHeurON            5.20  50    0.00%  1.00±0.00 nan±nan 
+AnomalyInvestigate_SMCTx0.70_AbsGainHeur 5.60   1    0.00% 10.00±0.00 nan±nan 
+SMCTSweep_x0.70_AbsGainHeurON            5.60  50    0.00%  9.86±1.66 nan±nan 
+SMCTSweep_x0.75_AbsGainHeurON            6.00  50    0.00%  9.44±1.64 nan±nan 
+SMCTSweep_x0.80_AbsGainHeurON            6.40  50    0.00%  0.00±0.00 nan±nan 
