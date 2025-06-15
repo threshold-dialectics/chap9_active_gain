@@ -6,6 +6,13 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Double the default font size so text is readable when figures are
+# included in the book, and ensure saved figures have high resolution.
+plt.rcParams.update({
+    "font.size": plt.rcParams.get("font.size", 10) * 2,
+    "savefig.dpi": 350,
+})
+
 
 # -------------------------------------------------------------------- helpers
 def calculate_gain_cost(g: float, phi_1: float, k_g: float) -> float:
@@ -270,17 +277,17 @@ def plot_smct_curves(df_smct: pd.DataFrame):
     plt.figure(figsize=(8,6))
     plt.plot(df_smct["smct"], df_smct["survival_rate"], "-o")
     plt.xlabel("SMCT"); plt.ylabel("Survival rate"); plt.grid(True)
-    plt.savefig("sweep_survival_vs_smct.png"); plt.close()
+    plt.savefig("sweep_survival_vs_smct.png", dpi=350); plt.close()
 
     plt.figure(figsize=(8,6))
     plt.plot(df_smct["smct"], df_smct["avg_pulse_count"], "-o")
     plt.xlabel("SMCT"); plt.ylabel("Avg pulse count"); plt.grid(True)
-    plt.savefig("sweep_pulse_count_vs_smct.png"); plt.close()
+    plt.savefig("sweep_pulse_count_vs_smct.png", dpi=350); plt.close()
 
     plt.figure(figsize=(8,6))
     plt.plot(df_smct["smct"], df_smct["avg_Fcrit_surv"], "-o")
     plt.xlabel("SMCT"); plt.ylabel("Avg Fcrit (survivors)"); plt.grid(True)
-    plt.savefig("sweep_fcrit_survivors_vs_smct.png"); plt.close()
+    plt.savefig("sweep_fcrit_survivors_vs_smct.png", dpi=350); plt.close()
 
 
 # ---------------------------------------------------------------- main
